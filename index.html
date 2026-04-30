@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengumuman Kelulusan 2026 - SMA Islam Ahmad Yani Batang</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Lora:wght@400;500;600&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-lora { font-family: 'Lora', serif; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+        .animate-scale-in { animation: scaleIn 0.6s ease forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .shimmer-text {
+            background: linear-gradient(90deg, #1a5c2e, #2d8a4e, #f0c040, #2d8a4e, #1a5c2e);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            animation: confetti 1.5s ease-out forwards;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a2e1a 0%, #14532d 30%, #1a5c2e 60%, #0f3d1e 100%);
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .login-input:focus {
+            box-shadow: 0 0 0 3px rgba(45,138,78,0.3);
+        }
+        .pattern-overlay {
+            background-image: radial-gradient(circle at 20% 50%, rgba(240,192,64,0.05) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(45,138,78,0.08) 0%, transparent 40%),
+                              radial-gradient(circle at 50% 80%, rgba(240,192,64,0.04) 0%, transparent 50%);
+        }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app" class="h-full w-full overflow-auto gradient-bg pattern-overlay"><!-- LOGIN PAGE -->
+   <div id="login-page" class="min-h-full flex items-center justify-center p-4">
+    <div class="w-full max-w-md"><!-- Logo/Header -->
+     <div class="text-center mb-8 animate-fade-in-up">
+      <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-lg animate-float">
+       <svg width="40" height="40" viewbox="0 0 40 40" fill="none"><path d="M20 4L4 14v12l16 10 16-10V14L20 4z" stroke="#1a5c2e" stroke-width="2" fill="rgba(26,92,46,0.2)" /> <path d="M20 8l12 7.5v9L20 32 8 24.5v-9L20 8z" stroke="#1a5c2e" stroke-width="1.5" fill="rgba(26,92,46,0.1)" /> <circle cx="20" cy="18" r="4" fill="#1a5c2e" /> <path d="M16 26h8" stroke="#1a5c2e" stroke-width="2" stroke-linecap="round" />
+       </svg>
+      </div>
+      <h1 id="school-title" class="font-playfair text-2xl font-bold text-green-800 mb-1">SMA Islam Ahmad Yani Batang</h1>
+      <p class="text-emerald-200 text-sm font-light tracking-wide">PENGUMUMAN KELULUSAN</p>
+      <p class="text-yellow-400 font-semibold text-lg mt-1">Tahun Pelajaran 2025/2026</p>
+     </div><!-- Login Card -->
+     <div class="glass-card rounded-2xl p-8 shadow-2xl animate-fade-in-up" style="animation-delay:0.2s">
+      <div class="text-center mb-6">
+       <h2 class="text-gray-800 font-semibold text-lg mb-1">Cek Kelulusan</h2>
+       <p class="text-gray-500 text-sm">Masukkan nama dan NISN untuk melihat hasil</p>
+      </div>
+      <form id="login-form" onsubmit="handleLogin(event)">
+       <div class="mb-4"><label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Siswa</label> <input type="text" id="nama" placeholder="Masukkan nama lengkap" required class="login-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emerald-500 transition-all text-sm">
+       </div>
+       <div class="mb-6"><label for="nisn" class="block text-sm font-medium text-gray-700 mb-1">NISN</label> <input type="text" id="nisn" placeholder="Masukkan 10 digit NISN" required class="login-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emerald-500 transition-all text-sm">
+       </div>
+       <div id="error-msg" class="hidden mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm text-center"></div><button type="submit" class="w-full py-3 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]"> <span class="flex items-center justify-center gap-2"> <i data-lucide="search" style="width:18px;height:18px"></i> Lihat Hasil Kelulusan </span> </button>
+      </form>
+     </div><!-- Quote -->
+     <div class="text-center mt-6 animate-fade-in-up" style="animation-delay:0.4s">
+      <p id="quote-text" class="font-lora text-emerald-100 text-sm italic opacity-80">"Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia."</p>
+     </div>
+    </div>
+   </div><!-- RESULT PAGE -->
+   <div id="result-page" class="hidden min-h-full flex items-center justify-center p-4">
+    <div class="w-full max-w-lg">
+     <div id="result-card" class="glass-card rounded-3xl p-8 shadow-2xl text-center relative overflow-hidden"><!-- Confetti container -->
+      <div id="confetti-container" class="absolute inset-0 pointer-events-none"></div><!-- Badge -->
+      <div class="relative z-10">
+       <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-700 flex items-center justify-center shadow-xl animate-scale-in"><i data-lucide="award" style="width:48px;height:48px;color:white"></i>
+       </div>
+       <h2 class="font-playfair text-3xl font-bold text-gray-800 mb-2">SELAMAT!</h2>
+       <div class="shimmer-text font-playfair text-4xl font-black mb-4">
+        LULUS
+       </div><!-- Student Info -->
+       <div class="bg-emerald-50 rounded-2xl p-6 mb-6 text-left space-y-3 border border-emerald-100">
+        <div class="flex justify-between items-center"><span class="text-gray-500 text-sm">Nama</span> <span id="result-nama" class="font-semibold text-gray-800 text-sm"></span>
+        </div>
+        <hr class="border-emerald-100">
+        <div class="flex justify-between items-center"><span class="text-gray-500 text-sm">NISN</span> <span id="result-nisn" class="font-semibold text-gray-800 text-sm"></span>
+        </div>
+        <hr class="border-emerald-100">
+        <div class="flex justify-between items-center"><span class="text-gray-500 text-sm">Tempat, Tanggal Lahir</span> <span id="result-ttl" class="font-semibold text-gray-800 text-sm"></span>
+        </div>
+        <hr class="border-emerald-100">
+        <div class="flex justify-between items-center"><span class="text-gray-500 text-sm">Status</span> <span class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-600 text-white text-sm font-bold rounded-full"> <i data-lucide="check-circle" style="width:14px;height:14px"></i> LULUS </span>
+        </div>
+       </div><!-- Message -->
+       <p class="font-lora text-gray-600 text-sm leading-relaxed mb-6">Kalian telah berhasil menyelesaikan perjalanan ini dengan penuh perjuangan dan dedikasi. Masa depan cerah menanti langkah kalian selanjutnya.</p><!-- School info -->
+       <div class="text-xs text-gray-400 mb-4">
+        <p class="font-semibold text-gray-600">SMA Islam Ahmad Yani Batang</p>
+        <p>Tahun Pelajaran 2025/2026</p>
+       </div><button onclick="backToLogin()" class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all text-sm"> <span class="flex items-center justify-center gap-2"> <i data-lucide="arrow-left" style="width:16px;height:16px"></i> Kembali </span> </button>
+      </div>
+     </div><!-- Disclaimer -->
+     <div class="mt-4 p-4 bg-black/20 rounded-xl border border-white/10">
+      <p class="text-emerald-100 text-xs text-center leading-relaxed opacity-90"><i data-lucide="info" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px"></i> Jika ada perbedaan hasil pengumuman online dan manual maka yang menjadi acuan adalah dokumen kelulusan yang telah disahkan dan ditandatangani oleh Kepala Sekolah.</p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+const students = [
+    {nisn:"0045101119",nama:"ANGGITA PRATIWI",ttl:"Batang, 24 Desember 2004",status:"LULUS"},
+    {nisn:"0088635761",nama:"BAYU SANTOSA",ttl:"Batang, 02 Januari 2008",status:"LULUS"},
+    {nisn:"0086136266",nama:"BUSTANUL ARIFIN",ttl:"Jakarta, 05 Maret 2008",status:"LULUS"},
+    {nisn:"0058587383",nama:"CHAIRUNISYA NUR HIDAYAH",ttl:"Batang, 27 Juli 2007",status:"LULUS"},
+    {nisn:"0082030100",nama:"DANI ALFARIZ",ttl:"Batang, 07 September 2008",status:"LULUS"},
+    {nisn:"0079820440",nama:"DEVARA ANINDYA ULYA",ttl:"Batang, 25 Oktober 2007",status:"LULUS"},
+    {nisn:"0076521329",nama:"DISHA ADELIA SAFITRI",ttl:"Dharmasraya, 20 Juni 2007",status:"LULUS"},
+    {nisn:"0079063455",nama:"FAHRAZZA KHALID BAYU SENO",ttl:"Batang, 08 Mei 2007",status:"LULUS"},
+    {nisn:"0089538722",nama:"FARIL MAULANA RIFA'I",ttl:"Batang, 17 April 2008",status:"LULUS"},
+    {nisn:"0089589211",nama:"GILANG ARTHA VIGUNA",ttl:"Batang, 21 Mei 2008",status:"LULUS"},
+    {nisn:"0075034239",nama:"IKRIMATUL LATIFAH",ttl:"Batang, 05 Desember 2007",status:"LULUS"},
+    {nisn:"0078533603",nama:"ILYAS ARTA KURNIAMSYAH",ttl:"Batang, 25 Februari 2007",status:"LULUS"},
+    {nisn:"0066522169",nama:"INTAN NOVITA SARI",ttl:"Batang, 01 November 2006",status:"LULUS"},
+    {nisn:"0084589080",nama:"INDAH HAYYU TAMALA",ttl:"Batang, 02 Juni 2008",status:"LULUS"},
+    {nisn:"0089126555",nama:"IRJA FUADI LEKSONO",ttl:"Batang, 21 Juni 2008",status:"LULUS"},
+    {nisn:"0057051319",nama:"KHALIFATULLAH AZZAM",ttl:"Batang, 20 November 2005",status:"LULUS"},
+    {nisn:"0083862073",nama:"KHOIRUL ANAM",ttl:"Batang, 22 Januari 2008",status:"LULUS"},
+    {nisn:"0061694239",nama:"MUSLIMAH FADILA ROYAN",ttl:"Wonogiri, 11 April 2006",status:"LULUS"},
+    {nisn:"0086414001",nama:"NANDA ARISWAN PUTRA",ttl:"Batang, 05 Januari 2008",status:"LULUS"},
+    {nisn:"0074978243",nama:"NEZA FARIDHOTUL ILMI",ttl:"Batang, 25 Mei 2007",status:"LULUS"},
+    {nisn:"0084189065",nama:"NURUL ZAHRATUS SITA",ttl:"Batang, 01 Januari 2008",status:"LULUS"},
+    {nisn:"0085850819",nama:"RIKZA FUADI LEKSONO",ttl:"Batang, 21 Juni 2008",status:"LULUS"},
+    {nisn:"0073682061",nama:"SITI SYIFAUL KHILMI",ttl:"Batang, 20 Juli 2007",status:"LULUS"},
+    {nisn:"0081477951",nama:"UMAR HASAN",ttl:"Batang, 01 Agustus 2008",status:"LULUS"},
+    {nisn:"0073906953",nama:"ZAIN FUAD AZAKIAH",ttl:"Batang, 30 Maret 2007",status:"LULUS"},
+    {nisn:"0085143276",nama:"AKMARINA",ttl:"Bekasi, 10 Juli 2008",status:"LULUS"},
+    {nisn:"0086878239",nama:"ARIQOTU SAFI'AH",ttl:"Pekalongan, 12 Januari 2008",status:"LULUS"},
+    {nisn:"0076449572",nama:"HUSEN KAFILLAH",ttl:"Jakarta, 17 November 2007",status:"LULUS"},
+    {nisn:"0084520127",nama:"IRADATUL KHOIRIYAH",ttl:"Pekalongan, 7 Mei 2008",status:"LULUS"},
+    {nisn:"0081785484",nama:"RISMA VITA LESTARI",ttl:"Batang, 16 Februari 2009",status:"LULUS"},
+    {nisn:"0073172510",nama:"TIARA ALISTA AYU ANGGRAINI",ttl:"Pekalongan, 11 Juli 2007",status:"LULUS"},
+    {nisn:"0089365034",nama:"ULUL AZMI",ttl:"Pekalongan, 15 April 2008",status:"LULUS"},
+    {nisn:"0087630799",nama:"ZIAN PUTRI NAWAFILA",ttl:"Pemalang, 18 Juni 2008",status:"LULUS"}
+];
+
+function handleLogin(e) {
+    e.preventDefault();
+    const nama = document.getElementById('nama').value.trim().toUpperCase();
+    const nisn = document.getElementById('nisn').value.trim();
+    const errEl = document.getElementById('error-msg');
+
+    const found = students.find(s => s.nisn === nisn && s.nama === nama);
+    if (!found) {
+        errEl.textContent = "Data tidak ditemukan. Pastikan Nama dan NISN yang Anda masukkan sudah benar.";
+        errEl.classList.remove('hidden');
+        return;
+    }
+
+    errEl.classList.add('hidden');
+    document.getElementById('result-nama').textContent = found.nama;
+    document.getElementById('result-nisn').textContent = found.nisn;
+    document.getElementById('result-ttl').textContent = found.ttl;
+    document.getElementById('login-page').classList.add('hidden');
+    document.getElementById('result-page').classList.remove('hidden');
+    createConfetti();
+    lucide.createIcons();
+}
+
+function backToLogin() {
+    document.getElementById('result-page').classList.add('hidden');
+    document.getElementById('login-page').classList.remove('hidden');
+    document.getElementById('login-form').reset();
+}
+
+function createConfetti() {
+    const container = document.getElementById('confetti-container');
+    container.innerHTML = '';
+    const colors = ['#f0c040','#2d8a4e','#e74c3c','#3498db','#9b59b6','#1abc9c'];
+    for (let i = 0; i < 40; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.top = (50 + Math.random() * 40) + '%';
+        piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.animationDelay = Math.random() * 0.5 + 's';
+        piece.style.transform = `rotate(${Math.random()*360}deg)`;
+        container.appendChild(piece);
+    }
+}
+
+// Element SDK
+const defaultConfig = {
+    school_name: "SMA Islam Ahmad Yani Batang",
+    quote_text: "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.",
+    background_color: "#0a2e1a",
+    surface_color: "#ffffff",
+    text_color: "#228B22",
+    primary_action: "#059669",
+    secondary_action: "#f0c040",
+    font_family: "Poppins",
+    font_size: 14
+};
+
+async function onConfigChange(config) {
+    const el = (id) => document.getElementById(id);
+    el('school-title').textContent = config.school_name || defaultConfig.school_name;
+    el('quote-text').textContent = `"${config.quote_text || defaultConfig.quote_text}"`;
+}
+
+window.elementSdk.init({
+    defaultConfig,
+    onConfigChange,
+    mapToCapabilities: (config) => ({
+        recolorables: [
+            { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({background_color:v}); }},
+            { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({surface_color:v}); }},
+            { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({text_color:v}); }},
+            { get: () => config.primary_action || defaultConfig.primary_action, set: (v) => { config.primary_action = v; window.elementSdk.setConfig({primary_action:v}); }},
+            { get: () => config.secondary_action || defaultConfig.secondary_action, set: (v) => { config.secondary_action = v; window.elementSdk.setConfig({secondary_action:v}); }}
+        ],
+        borderables: [],
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({font_family:v}); }},
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({font_size:v}); }}
+    }),
+    mapToEditPanelValues: (config) => new Map([
+        ["school_name", config.school_name || defaultConfig.school_name],
+        ["quote_text", config.quote_text || defaultConfig.quote_text]
+    ])
+});
+
+lucide.createIcons();
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f3fe99f621cce12',t:'MTc3NzQ4MjU0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
